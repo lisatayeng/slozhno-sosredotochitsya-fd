@@ -171,16 +171,12 @@
   left: 334.89px;
 }
 
-.content-block__subtitle,
-.content-block__text {
+.content-block__subtitle {
   width: 648.92px;
   font-family: var(--main-font);
   font-size: 18px;
   line-height: 23.4px;
   margin: 0;
-}
-
-.content-block__subtitle {
   background-color: var(--accent-color);
   color: var(--text-color);
   font-weight: 700;
@@ -191,6 +187,11 @@
 }
 
 .content-block__text {
+  width: 648.92px;
+  font-family: var(--main-font);
+  font-size: 18px;
+  line-height: 23.4px;
+  margin: 0;
   color: var(--text-color);
   font-weight: 400;
   height: 211px;
@@ -270,8 +271,7 @@
 }
 
 /* ===== ОБЩИЕ СТИЛИ ДЛЯ КОЛОНОК ===== */
-.content-column__subtitle,
-.content-column__text {
+.content-column__subtitle {
   width: 315px;
   font-family: var(--main-font);
   font-size: 18px;
@@ -279,9 +279,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-.content-column__subtitle {
   background-color: var(--accent-color);
   color: var(--text-color);
   font-weight: 700;
@@ -291,6 +288,13 @@
 }
 
 .content-column__text {
+  width: 315px;
+  font-family: var(--main-font);
+  font-size: 18px;
+  line-height: 23.4px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   color: var(--text-color);
   font-weight: 400;
   background-color: var(--accent-bg-color);
@@ -357,8 +361,40 @@
 }
 
 /* ===== ОБЩИЕ СТИЛИ ДЛЯ СОВЕТОВ ===== */
-.content-advice__main-title,
-.advice-block__title,
+.content-advice__main-title {
+  font-family: var(--main-font);
+  font-size: 18px;
+  line-height: 23.4px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--accent-bg-color);
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  height: 23px;
+  width: 649px;
+  font-weight: 700;
+}
+
+.advice-block__title {
+  font-family: var(--main-font);
+  font-size: 18px;
+  line-height: 23.4px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--accent-bg-color);
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  height: 23px;
+  width: 649px;
+  font-weight: 400;
+}
+
 .advice-block__text {
   font-family: var(--main-font);
   font-size: 18px;
@@ -367,41 +403,9 @@
   padding: 0;
   box-sizing: border-box;
   background-color: var(--accent-bg-color);
-}
-
-.content-advice__main-title {
-  background-color: var(--accent-color);
-  color: var(--text-color);
-  display: flex;
-  align-items: center;
-  height: 23px;
-}
-
-.advice-block__title {
-  background-color: var(--accent-color);
-  color: var(--text-color);
-  display: flex;
-  align-items: center;
-  height: 23px;
-}
-
-.advice-block__text {
   color: var(--text-color);
   font-weight: 400;
   margin: 10px 0 0 0;
-}
-
-.content-advice__main-title {
-  width: 649px;
-  font-weight: 700;
-}
-
-.advice-block__title {
-  width: 649px;
-  font-weight: 400;
-}
-
-.advice-block__text {
   width: 647.55px;
 }
 
