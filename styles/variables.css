@@ -1,4 +1,14 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
+:root {
+  /* Точные цвета из фигмы */
+  --accent-color: #FF8DCB;      /* Розовый для фона рамки */
+  --text-color: #353430;        /* Чёрный для текста */
+  --title-color: #FFC2E6;       /* Светло-розовый для заголовка */
+  --bg-color: #FFF1F7;          /* Фон страницы */
+  --decor-color: #353430;       /* Чёрный для уголков и кнопок */
+  --button-hover-color: rgba(50, 49, 45, 0.4);
+  --bg-image: url('../images/cover-image-light.png');
+  --accent-bg-color: transparent; /* Прозрачный фон для блоков */
+  
+  /* Шрифты */
+  --main-font: 'IBM Plex mono', monospace;
+}

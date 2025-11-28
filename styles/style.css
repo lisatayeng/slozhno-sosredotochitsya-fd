@@ -1,5 +1,1839 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+/* ===== HEADER (1024×768) ===== */
+.header {
+  position: relative;
+  width: 1024px;
+  height: 768px;
+  margin: 0 auto;
+  background-color: var(--bg-color);
+  background-image: var(--bg-image);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
 
-.page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+/* ===== МЕНЮ ТЕМ ===== */
+.header__theme-menu {
+  position: absolute;
+  top: 20px;
+  left: 397px;
+  width: 230px;
+  height: 26px;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header__theme-menu-item {
+  width: 70px;
+  height: 26px;
+}
+
+.header__theme-menu-button {
+  width: 70px;
+  height: 26px;
+  padding: 2px 13px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text-color);
+  font-family: var(--main-font);
+  font-size: 18px;
+  line-height: 1;
+  text-align: center;
+  cursor: pointer;
+}
+
+.header__theme-menu-button:hover {
+  border-color: var(--button-hover-color);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--decor-color);
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--decor-color);
+  pointer-events: none;
+}
+
+/* ===== ЗАГОЛОВОК NO FOCUS ===== */
+.header__title-text {
+  position: absolute;
+  top: 319px;
+  left: 0;
+  width: 759px;
+  height: 130px;
+  margin: 0;
+  font-family: var(--main-font);
+  font-weight: 700;
+  font-size: 157px;
+  line-height: 83%;
+  color: var(--title-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+/* ===== ТЕКСТ И РАМКА ===== */
+.header__content {
+  position: absolute;
+  top: 563px;
+  left: 513px;
+  width: 491px;
+  height: 71px;
+}
+
+.header__content-text {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  font-family: var(--main-font);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23.4px;
+  margin: 0;
+  padding: 0;
+  width: 491px;
+  height: 71px;
+  display: flex;
+  align-items: center;
+}
+
+/* ===== СТРЕЛКИ ===== */
+.header::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  bottom: 20px;
+  left: 20px;
+  border-bottom: 1px solid var(--decor-color);
+  border-left: 1px solid var(--decor-color);
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 20px;
+  right: 20px;
+  border-top: 1px solid var(--decor-color);
+  border-right: 1px solid var(--decor-color);
+}
+/* ===== ОСНОВНОЙ КОНТЕНТ ===== */
+.main {
+  width: 1024px;
+  height: 3472px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  position: relative;
+  background-color: var(--bg-color);
+}
+
+/* ===== ОБЩИЕ СТИЛИ СЕКЦИЙ ===== */
+.section {
+  position: absolute;
+  width: 984px; 
+  left: 20px;
+}
+
+.section__title {
+  position: absolute;
+  left: 0;
+  color: var(--text-color);
+  font-family: var(--main-font);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23.4px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* ===== ПЕРВАЯ СЕКЦИЯ ===== */
+.section {
+  height: 508px;
+  top: 60px;
+}
+
+.section__title {
+  width: 314.96px;
+  height: 47px;
+}
+
+/* ===== БЛОКИ КОНТЕНТА ===== */
+.content-block {
+  position: absolute;
+  width: 648.92px;
+  left: 334.89px;
+}
+
+.content-block__subtitle,
+.content-block__text {
+  width: 648.92px;
+  font-family: var(--main-font);
+  font-size: 18px;
+  line-height: 23.4px;
+  margin: 0;
+}
+
+.content-block__subtitle {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  height: 23px;
+}
+
+.content-block__text {
+  color: var(--text-color);
+  font-weight: 400;
+  height: 211px;
+  margin: 10px 0 0 0;
+}
+
+/* ===== МНОГОЗАДАЧНОСТЬ ===== */
+.content-block--multitasking {
+  top: 0;
+  height: 23px;
+}
+
+/* ===== ДОФАМИН ===== */
+.content-block--dopamine {
+  top: 264px;
+  height: 23px;
+}
+
+/* Позиционирование текста */
+.content-block--multitasking + .content-block__text {
+  position: absolute;
+  top: 33px;
+  left: 354.89px;
+}
+
+.content-block--dopamine + .content-block__text {
+  position: absolute;
+  top: 297px; /* 264 + 33 */
+  left: 354.89px;
+}
+/* ===== ВТОРАЯ СЕКЦИЯ ===== */
+.section--second {
+  position: absolute;
+  width: 984px;
+  height: 498px;
+  top: 648px;
+  left: 20px;
+}
+
+.section__title--second {
+  position: absolute;
+  left: 0;
+  width: 315px;
+  height: 47px;
+  background-color: var(--accent-bg-color);
+  color: var(--text-color);
+  font-family: var(--main-font);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23.4px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* ===== КОЛОНКИ ===== */
+.content-columns {
+  position: absolute;
+  top: 67px;
+  left: 0;
+  width: 984px;
+  height: 431px;
+  display: flex;
+  gap: 20px;
+}
+
+.content-column {
+  width: 315px;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-column__block {
+  width: 315px;
+  background-color: var(--accent-bg-color);
+}
+
+/* ===== ОБЩИЕ СТИЛИ ДЛЯ КОЛОНОК ===== */
+.content-column__subtitle,
+.content-column__text {
+  width: 315px;
+  font-family: var(--main-font);
+  font-size: 18px;
+  line-height: 23.4px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.content-column__subtitle {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  font-weight: 700;
+  height: 23px;
+  display: flex;
+  align-items: center;
+}
+
+.content-column__text {
+  color: var(--text-color);
+  font-weight: 400;
+  background-color: var(--accent-bg-color);
+  margin: 10px 0 0 0;
+}
+
+/* ===== ВЫСОТЫ БЛОКОВ И ТЕКСТА ===== */
+.content-column:first-child .content-column__block {
+  height: 384px;
+}
+
+.content-column:nth-child(2) .content-column__block {
+  height: 361px;
+}
+
+.content-column:last-child .content-column__block {
+  height: 431px;
+}
+
+.content-column:first-child .content-column__text {
+  height: 351px;
+}
+
+.content-column:nth-child(2) .content-column__text {
+  height: 328px;
+}
+
+.content-column:last-child .content-column__text {
+  height: 398px;
+}
+/* ===== ТРЕТЬЯ СЕКЦИЯ ===== */
+.section--third {
+  position: absolute;
+  width: 984px;
+  height: 1015px;
+  top: 1226px;
+  left: 20px;
+}
+
+.section__title--third {
+  position: absolute;
+  left: 0;
+  width: 315px;
+  height: 67px;
+  background-color: var(--accent-bg-color);
+  color: var(--text-color);
+  font-family: var(--main-font);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23.4px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* ===== БЛОК С СОВЕТАМИ ===== */
+.content-advice {
+  position: absolute;
+  width: 649px;
+  height: 1015px;
+  left: 335px;
+  top: 0;
+}
+
+/* ===== ОБЩИЕ СТИЛИ ДЛЯ СОВЕТОВ ===== */
+.content-advice__main-title,
+.advice-block__title,
+.advice-block__text {
+  font-family: var(--main-font);
+  font-size: 18px;
+  line-height: 23.4px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--accent-bg-color);
+}
+
+.content-advice__main-title,
+.advice-block__title {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  height: 23px;
+}
+
+.content-advice__main-title {
+  width: 649px;
+  font-weight: 700;
+}
+
+.advice-block__title {
+  width: 649px;
+  font-weight: 400;
+}
+
+.advice-block__text {
+  width: 647.55px;
+  color: var(--text-color);
+  font-weight: 400;
+  margin: 10px 0 0 0;
+}
+
+/* ===== БЛОКИ СОВЕТОВ ===== */
+.advice-block {
+  position: absolute;
+  width: 649px;
+  background-color: var(--accent-bg-color);
+}
+
+/* ===== ПОЗИЦИОНИРОВАНИЕ БЛОКОВ ===== */
+.advice-block--first {
+  top: 43px;
+  height: 254px;
+}
+
+.advice-block--second {
+  top: 307px;
+  height: 150px;
+}
+
+.advice-block--third {
+  top: 477px;
+  height: 197px;
+}
+
+.advice-block--fourth {
+  top: 694px;
+  height: 151px;
+}
+
+.advice-block--fifth {
+  top: 865px;
+  height: 150px;
+}
+
+/* ===== ВЫСОТЫ ТЕКСТА ===== */
+.advice-block--first .advice-block__text {
+  height: 211px;
+}
+
+.advice-block--second .advice-block__text {
+  height: 117px;
+}
+
+.advice-block--third .advice-block__text {
+  height: 164px;
+}
+
+.advice-block--fourth .advice-block__text {
+  height: 118px;
+}
+
+.advice-block--fifth .advice-block__text {
+  height: 117px;
+}
+/* ===== ЧЕТВЕРТАЯ СЕКЦИЯ ===== */
+.section--fourth {
+  position: absolute;
+  width: 984px;
+  height: 1091px;
+  top: 2321px;
+  left: 20px;
+}
+
+.section__title--fourth {
+  position: absolute;
+  left: 0;
+  width: 983.24px;
+  height: 23px;
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  font-family: var(--main-font);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23.4px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* ===== ГАЛЕРЕЯ ===== */
+.gallery {
+  position: absolute;
+  width: 984px;
+  height: 1068px;
+  top: 43px;
+  left: 0;
+}
+
+/* ===== ОБЩИЕ СТИЛИ ДЛЯ ИЗОБРАЖЕНИЙ ===== */
+.gallery__image {
+  position: absolute;
+  object-fit: cover;
+  border: 1px solid var(--accent-color);
+}
+
+/* ===== ПОЗИЦИОНИРОВАНИЕ ИЗОБРАЖЕНИЙ ===== */
+.gallery__image--sunset {
+  width: 649.5px;
+  height: 260px;
+  top: 0;
+  left: 0;
+}
+
+.gallery__image--tape {
+  width: 315px;
+  height: 768px;
+  top: 280px;
+  left: 0;
+}
+
+.gallery__image--books {
+  width: 315px;
+  height: 315px;
+  top: 280px;
+  left: 335px;
+}
+
+.gallery__image--ice-cream {
+  width: 314px;
+  height: 595px;
+  top: 0;
+  left: 670px;
+}
+
+.gallery__image--street {
+  width: 648px;
+  height: 433px;
+  top: 615px;
+  left: 336px;
+}
+/* ===== ФУТЕР ===== */
+.footer {
+  position: relative;
+  width: 1024px;
+  height: 768px;
+  margin: 0 auto;
+  background-color: var(--bg-color);
+  background-image: var(--bg-image);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.footer__title {
+  position: absolute;
+  top: 319px;
+  left: 277px;
+  width: 471px;
+  height: 130px;
+  margin: 0;
+  font-family: var(--main-font);
+  font-weight: 700;
+  font-size: 157px;
+  line-height: 83%;
+  color: var(--title-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== СТРЕЛКИ ФУТЕРА ===== */
+.footer::before,
+.footer::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+}
+
+.footer::after {
+  bottom: 20px;
+  left: 20px;
+  border-bottom: 1px solid var(--decor-color);
+  border-left: 1px solid var(--decor-color);
+}
+
+.footer::before {
+  top: 20px;
+  right: 20px;
+  border-top: 1px solid var(--decor-color);
+  border-right: 1px solid var(--decor-color);
+}
+/* ===== СТИЛИ ДЛЯ ССЫЛОК ===== */
+.content-link,
+.advice-link {
+  color: var(--text-color);
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--accent-color);
+  border: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.content-link:hover,
+.advice-link:hover {
+  border-bottom: 1px solid var(--text-color);
+}
+
+.content-link:focus,
+.advice-link:focus {
+  outline: none;
+}
+
+.content-link:focus-visible,
+.advice-link:focus-visible {
+  border: 1px solid var(--text-color);
+}
+
+/* ===== АДАПТАЦИЯ ДЛЯ 768×1024 ===== */
+@media (max-width: 768px) {
+  .header {
+    position: relative;
+    width: 768px;
+    height: 1024px;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 10px;
+    background-color: var(--bg-color);
+    background-image: var(--bg-image);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+
+  /* ===== Меню тем (день / авто / неон) ===== */
+  .header__theme-menu {
+    position: absolute;
+    top: 192px;
+    left: 678px;
+    width: 70px;
+    height: 98px;
+  }
+
+  .header__theme-menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    height: 100%;
+  }
+
+  .header__theme-menu-item {
+    width: 70px;
+    height: 26px;
+  }
+
+  .header__theme-menu-button {
+    width: 70px;
+    height: 26px;
+    padding-left: 13px;
+    padding-right: 13px;
+    border: 1px solid transparent;
+    background: transparent;
+    color: var(--text-color);
+    font-family: var(--main-font);
+    font-size: 18px;
+    line-height: 18px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 400;
+  }
+
+  .header__theme-menu-button:hover {
+    border-color: var(--button-hover-color);
+  }
+
+  .header__theme-menu-button:focus {
+    outline: none;
+  }
+
+  .header__theme-menu-button:focus-visible {
+    border-bottom: 1px solid var(--decor-color);
+  }
+
+  .header__theme-menu-button_active {
+    border: 1px solid var(--decor-color);
+    background: transparent;
+    pointer-events: none;
+  }
+
+  /* ===== Заголовок "no focus" ===== */
+  .header__title-text {
+    position: absolute;
+    top: 463px;
+    left: 0;
+    width: 576.84px;
+    height: 99px;
+    margin: 0;
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 120px;
+    line-height: 83%;
+    letter-spacing: 0;
+    color: var(--title-color);
+    text-shadow: 4px 4px 0 var(--accent-color);
+  }
+
+  /* ===== Текст и рамка ===== */
+  .header__content {
+    position: absolute;
+    top: 724px;
+    left: 384px;
+    width: 364px;
+    height: 117px;
+    background-color: var(--accent-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header__content-text {
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23.4px;
+    color: var(--text-color);
+    margin: 0;
+    text-align: left;
+    box-sizing: border-box;
+    background-color: var(--accent-color);
+  }
+
+  /* ===== Стрелки ===== */
+  .header::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 979px;
+    left: 20px;
+    border-style: solid;
+    border-color: var(--decor-color);
+    border-width: 0 0 1px 1px;
+  }
+
+  .header::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 20px;
+    left: 723px;
+    border-style: solid;
+    border-color: var(--decor-color);
+    border-width: 1px 1px 0 0;
+  }
+  /* ===== Основной контент  ===== */
+  .main {
+    width: 768px;
+    height: 3682px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    position: relative;
+    background-color: var(--bg-color);
+  }
+  .section {
+    position: absolute;
+    width: 728px; 
+    height: 648px;
+    top: 60px; 
+    left: 20px;
+  }
+
+  /* ===== Почему сосредоточиться так сложно ===== */
+  .section__title {
+    position: absolute;
+    width: 236px;
+    height: 71px;
+    color: var(--text-color);
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23.4px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  /* ===== 1 блок ===== */
+  .content-block {
+    position: absolute;
+    width: 728px;
+    height: 174px;
+    left: 256.2px;
+  }
+
+  /* ===== Многозадачность ===== */
+  .content-block--multitasking {
+    top: 23;
+    height: 28px;
+  }
+
+  /* ===== Дофамин ===== */
+  .content-block--dopamine {
+    top: 334px;
+  }
+
+  /* ===== Стиль заголовков ===== */
+  .content-block__subtitle {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23.4px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    left: 276px;
+    height: 23px;
+    width: 472px;
+  }
+
+  .content-block__text {
+    color: var(--text-color);
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23.4px;
+    width: 472px;
+    height: 314px;
+    margin: 10px 0 0 0;
+  }
+
+  /* Позиционирование текста для многозадачности */
+  .content-block--multitasking + .content-block__text {
+    position: absolute;
+    top: 33px;
+    left: 276px;
+    width: 472px;
+    height: 281px;
+  }
+
+  /* Позиционирование текста для дофамина */
+  .content-block--dopamine + .content-block__text {
+    position: absolute;
+    top: 367px;
+    left: 276px;
+    width: 472px;
+    height: 281px;
+  }
+  /* ===== ВТОРАЯ СЕКЦИЯ ДЛЯ 768×1024 ===== */
+  .section--second {
+    position: absolute;
+    width: 728px;
+    height: 675px;
+    top: 788px;
+    left: 20px;
+  }
+
+  .section__title--second {
+    position: absolute;
+    width: 23px;
+    height: 69px;
+    color: var(--text-color);
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23.4px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  /* ПЕРЕОПРЕДЕЛЯЕМ СУЩЕСТВУЮЩИЕ КЛАССЫ */
+  .content-columns {
+    position: absolute;
+    top: 80px; 
+    left: 0;
+    width: 728px;
+    height: 595px;
+    display: block; 
+    gap: 0;
+  }
+
+  .content-column {
+    position: absolute;
+    width: 728px;
+    padding-top: 11px;
+    left: 0;
+  }
+
+  /* ПЕРВАЯ КОЛОНКА - МНОГОЗАДАЧНОСТЬ */
+  .content-column:first-child {
+    top: 0;
+    height: 174px;
+  }
+
+  /* ВТОРАЯ КОЛОНКА - ЕДА */
+  .content-column:nth-child(2) {
+    top: 194px;
+    height: 174px;
+  }
+
+  /* ТРЕТЬЯ КОЛОНКА - ГАДЖЕТЫ */
+  .content-column:last-child {
+    top: 388px;
+    height: 197px;
+  }
+
+  .content-column__block {
+    width: 728px;
+    background-color: var(--accent-bg-color);
+  }
+
+  .content-column__subtitle {
+    width: 728px;
+    height: 23px;
+    background-color: var(--accent-color);
+  }
+
+  .content-column__text {
+    width: 728px;
+    margin: 10px 0 0 0;
+    background-color: var(--accent-bg-color);
+  }
+
+  /* ВЫСОТА ТЕКСТА ДЛЯ КАЖДОГО БЛОКА */
+  .content-column:first-child .content-column__text {
+    height: 141px;
+  }
+
+  .content-column:nth-child(2) .content-column__text {
+    height: 141px;
+  }
+
+  .content-column:last-child .content-column__text {
+    height: 164px;
+  }
+  /* ===== ТРЕТЬЯ СЕКЦИЯ ДЛЯ 768×1024 ===== */
+  .section--third {
+    position: absolute;
+    width: 728px;
+    height: 1296px;
+    top: 1540px; 
+    left: 0; 
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .section__title--third {
+    position: absolute;
+    width: 236px;
+    height: 98px;
+    left: 20px; 
+    color: var(--text-color);
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23.4px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    background-color: var(--accent-bg-color);
+  }
+
+  /* ===== БЛОК С СОВЕТАМИ ДЛЯ 768×1024 ===== */
+  .content-advice {
+    position: absolute;
+    width: 472px;
+    height: 1296px;
+    left: 276px; 
+    top: 0;
+  }
+
+  /* Главный заголовок советов */
+  .content-advice__main-title {
+    width: 472px;
+    height: 23px;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23.4px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* ===== БЛОКИ СОВЕТОВ ДЛЯ 768×1024 ===== */
+  .advice-block {
+    position: absolute;
+    width: 472px;
+    background-color: var(--accent-bg-color);
+  }
+
+  .advice-block__title {
+    width: 472px;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23.4px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .advice-block__text {
+    width: 472px;
+    color: var(--text-color);
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23.4px;
+    margin: 10px 0 0 0;
+    background-color: var(--accent-bg-color);
+    padding: 0;
+  }
+
+  /* ===== ПЕРВЫЙ БЛОК ===== */
+  .advice-block--first {
+    top: 43px;
+    height: 314px;
+  }
+
+  .advice-block--first .advice-block__title {
+    height: 24px;
+  }
+
+  .advice-block--first .advice-block__text {
+    height: 280px;
+  }
+
+  /* ===== ВТОРОЙ БЛОК ===== */
+  .advice-block--second {
+    top: 377px;
+    height: 198px;
+  }
+
+  .advice-block--second .advice-block__title {
+    height: 24px;
+  }
+
+  .advice-block--second .advice-block__text {
+    height: 164px;
+  }
+
+  /* ===== ТРЕТИЙ БЛОК ===== */
+  .advice-block--third {
+    top: 595px;
+    height: 290px;
+  }
+
+  .advice-block--third .advice-block__title {
+    height: 23px;
+  }
+
+  .advice-block--third .advice-block__text {
+    height: 257px;
+  }
+
+  /* ===== ЧЕТВЕРТЫЙ БЛОК ===== */
+  .advice-block--fourth {
+    top: 905px;
+    height: 197px;
+  }
+
+  .advice-block--fourth .advice-block__title {
+    height: 24px;
+  }
+
+  .advice-block--fourth .advice-block__text {
+    height: 163px;
+  }
+
+  /* ===== ПЯТЫЙ БЛОК ===== */
+  .advice-block--fifth {
+    top: 1122px;
+    height: 175px;
+  }
+
+  .advice-block--fifth .advice-block__title {
+    height: 24px;
+  }
+
+  .advice-block--fifth .advice-block__text {
+    height: 141px;
+  }
+  /* ===== ЧЕТВЕРТАЯ СЕКЦИЯ ДЛЯ 768×1024 ===== */
+  .section--fourth {
+    position: absolute;
+    width: 728px;
+    height: 823px;
+    top: 2920px;
+    left: 20px;
+    background-color: var(--bg-color);
+  }
+
+  .section__title--fourth {
+    position: absolute;
+    width: 728px;
+    height: 23px;
+    left: 0;
+    top: 0;
+    color: var(--text-color);
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23.4px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    background-color: var(--accent-color);
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* ===== ГАЛЕРЕЯ ДЛЯ 768×1024 ===== */
+  .gallery {
+    position: absolute;
+    width: 728px;
+    height: 780px;
+    top: 43px;
+    left: 0;
+  }
+
+  .gallery__image {
+    position: absolute;
+    object-fit: cover;
+    border: 1px solid var(--accent-color);
+  }
+
+  .gallery__image--sunset {
+    width: 479px;
+    height: 192px;
+    top: 0;
+    left: 0;
+  }
+
+  .gallery__image--tape {
+    width: 229px;
+    height: 568px;
+    top: 212px;
+    left: 0;
+  }
+
+  .gallery__image--books {
+    width: 230px;
+    height: 230px;
+    top: 212px;
+    left: 249px;
+  }
+
+  .gallery__image--ice-cream {
+    width: 229px;
+    height: 442px;
+    top: 0;
+    left: 499px;
+  }
+
+  .gallery__image--street {
+    width: 479px;
+    height: 318px;
+    top: 462px;
+    left: 249px;
+  }
+  /* ===== ФУТЕР ДЛЯ 768×1024 ===== */
+  .footer {
+    position: relative;
+    width: 768px;
+    height: 1024px;
+    margin: 0 auto;
+    background-color: var(--bg-color);
+    background-image: var(--bg-image);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .footer__title {
+    position: absolute;
+    top: 463px;
+    left: 204px;
+    width: 360px;
+    height: 99px;
+    margin: 0;
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 120px;
+    line-height: 83%;
+    color: var(--title-color);
+    text-shadow: 2px 2px 0 var(--accent-color);
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* ===== СТРЕЛКИ ФУТЕРА ДЛЯ 768×1024 ===== */
+  .footer::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    bottom: 20px;
+    left: 20px;
+    border-bottom: 1px solid var(--decor-color);
+    border-left: 1px solid var(--decor-color);
+    border-top: none;
+    border-right: none;
+  }
+
+  .footer::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 20px;
+    right: 20px;
+    border-top: 1px solid var(--decor-color);
+    border-right: 1px solid var(--decor-color);
+    border-bottom: none;
+    border-left: none;
+    left: auto;
+  }
+}
+
+/* ===== МЕДИА-ЗАПРОС ДЛЯ ЭКРАНОВ 375×668 ===== */
+@media (max-width: 375px) {
+  .header {
+    width: 100%;
+    height: 668px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .header__theme-menu {
+    top: 75px;
+    left: 295px;
+    width: 70px;
+    height: 98px;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .header__theme-menu-item {
+    width: 70px;
+    height: 26px;
+  }
+
+  .header__theme-menu-button {
+    padding: 3px 13px;
+    border: 1px solid transparent;
+    left: 295px;
+  }
+
+  /*  СТИЛИ ДЛЯ ХОВЕРА И ФОКУСА */
+  .header__theme-menu-button:hover {
+    border-color: var(--button-hover-color);
+  }
+
+  .header__theme-menu-button:focus {
+    outline: none;
+  }
+
+  .header__theme-menu-button:focus-visible {
+    border-bottom: 1px solid var(--decor-color);
+  }
+
+  .header__theme-menu-button_active {
+    border: 1px solid var(--decor-color);
+    pointer-events: none;
+  }
+
+  .header__title-text {
+    top: 238px;
+    left: 10px;
+    width: 355px;
+    height: 192px;
+    font-size: 116px;
+    color: var(--title-color);
+    text-shadow: 4px 4px 0 var(--accent-color);
+    line-height: 83%;
+  }
+
+  .header__content {
+    top: 485px;
+    left: 10px;
+    width: 355px;
+    height: 117px;
+  }
+
+  .header__content-text {
+    width: 355px;
+    height: 117px;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    font-size: 18px;
+    line-height: 23.4px;
+  }
+
+  .header::after {
+    top: 633px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+    border-bottom: 1px solid var(--decor-color);
+    border-left: 1px solid var(--decor-color);
+    border-top: none;
+    border-right: none;
+  }
+
+  .header::before {
+    top: 10px;
+    left: 339.96px;
+    width: 25px;
+    height: 25px;
+    border-top: 1px solid var(--decor-color);
+    border-right: 1px solid var(--decor-color);
+    border-bottom: none;
+    border-left: none;
+  }
+  /* ===== Основной контент для 375×668 ===== */
+  .main {
+    width: 375px;
+    height: 5345px;
+    margin: 0 auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+    position: relative;
+    background-color: var(--bg-color);
+  }
+
+  /* ===== Почему сосредоточиться так сложно ===== */
+  .section__title {
+    position: absolute;
+    width: 355px;
+    left: -10px;
+    height: 47px;
+    color: var(--text-color);
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23.4px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  /* ===== 1 блок ===== */
+  .content-block {
+    position: absolute;
+    width: 355px;
+    height: 431px;
+    left: 10px;
+  }
+
+  /* ===== Многозадачность ===== */
+  .content-block--multitasking {
+    left: -10px;
+    top: 67px;
+    height: 23px;
+    width: 355px;
+  }
+
+  /* ===== Дофамин ===== */
+  .content-block--dopamine {
+    left: -10px;
+    top: 518px;
+    height: 23px;
+    width: 355px;
+  }
+
+  /* ===== Стиль заголовков ===== */
+  .content-block__subtitle {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23.4px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    width: 355px;
+    height: 23px;
+  }
+
+  .content-block__text {
+    color: var(--text-color);
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23.4px;
+    width: 355px;
+    height: 398px;
+    margin: 10px 0 0 0;
+  }
+
+  /* Позиционирование текста для многозадачности */
+  .content-block--multitasking + .content-block__text {
+    position: absolute;
+    top: 100px;
+    left: 10px;
+    width: 351px;
+    height: 398px;
+  }
+
+  /* Позиционирование текста для дофамина */
+  .content-block--dopamine + .content-block__text {
+    position: absolute;
+    top: 551px;
+    left: 10px;
+    width: 351px;
+    height: 398px;
+  }
+  /* ===== ВТОРАЯ СЕКЦИЯ ДЛЯ 375×668 ===== */
+  .section--second {
+    position: absolute;
+    width: 375px;
+    height: 1119px;
+    top: 1039px; 
+    left: 0;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .section__title--second {
+    position: absolute;
+    width: 355px;
+    height: 87px;
+    left: 10px;
+    color: var(--text-color);
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23.4px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    background-color: var(--accent-color);
+  }
+
+  /* ПЕРЕОПРЕДЕЛЯЕМ КОЛОНКИ ДЛЯ МОБИЛЬНОЙ ВЕРСИИ */
+  .content-columns {
+    position: absolute;
+    top: 67px;
+    left: 10px;
+    width: 355px;
+    height: 1052px;
+    display: block;
+    gap: 0;
+  }
+
+  .content-column {
+    position: absolute;
+    width: 355px;
+    left: 0;
+    background-color: var(--accent-bg-color);
+  }
+
+  /* ПЕРВАЯ КОЛОНКА - МНОГОЗАДАЧНОСТЬ */
+  .content-column:first-child {
+    top: 10px;
+    height: 314px;
+  }
+
+  /* ВТОРАЯ КОЛОНКА - ЕДА */
+  .content-column:nth-child(2) {
+    top: 344px;
+    height: 314px;
+  }
+
+  /* ТРЕТЬЯ КОЛОНКА - ГАДЖЕТЫ */
+  .content-column:last-child {
+    top: 678px;
+    height: 384px;
+  }
+
+  .content-column__block {
+    width: 355px;
+    background-color: var(--accent-bg-color);
+  }
+
+  .content-column__subtitle {
+    width: 355px;
+    height: 23px;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23.4px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .content-column__text {
+    width: 355px;
+    color: var(--text-color);
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23.4px;
+    margin: 1px 0 0 0;
+    background-color: var(--accent-bg-color);
+    padding: 0;
+  }
+
+  /* ВЫСОТА ТЕКСТА ДЛЯ КАЖДОГО БЛОКА */
+  .content-column:first-child .content-column__text {
+    height: 281px;
+  }
+
+  .content-column:nth-child(2) .content-column__text {
+    height: 281px;
+  }
+
+  .content-column:last-child .content-column__text {
+    height: 351px;
+  }
+
+  /* Позиционирование текста для многозадачности */
+  .content-column:first-child .content-column__text {
+    position: absolute;
+    top: 43px;
+    left: 0;
+  }
+
+  /* Позиционирование текста для еды */
+  .content-column:nth-child(2) .content-column__text {
+    position: absolute;
+    top: 43px;
+    left: 0;
+  }
+
+  /* Позиционирование текста для гаджетов */
+  .content-column:last-child .content-column__text {
+    position: absolute;
+    top: 43px;
+    left: 0;
+  }
+  /* ===== ТРЕТЬЯ СЕКЦИЯ ДЛЯ 375×668 ===== */
+  .section--third {
+    position: absolute;
+    width: 375px;
+    height: 1736px;
+    top: 2230px;
+    left: 0;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .section__title--third {
+    position: absolute;
+    width: 355px;
+    height: 70px; 
+    left: 10px;
+    top: 0;
+    color: var(--text-color);
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23.4px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    background-color: var(--accent-bg-color);
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* ===== БЛОК С СОВЕТАМИ ДЛЯ 375×668 ===== */
+  .content-advice {
+    position: absolute;
+    width: 355px;
+    height: 1619px;
+    left: 10px;
+    top: 90px; 
+  }
+
+  /* Главный заголовок советов */
+  .content-advice__main-title {
+    position: absolute;
+    width: 355px;
+    height: 47px;
+    top: 0;
+    left: 0;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23.4px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* ===== БЛОКИ СОВЕТОВ ДЛЯ 375×668 ===== */
+  .advice-block {
+    position: absolute;
+    width: 355px;
+    left: 0;
+    background-color: var(--accent-bg-color);
+  }
+
+  .advice-block__title {
+    width: 355px;
+    height: 23px;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23.4px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .advice-block__text {
+    width: 355px;
+    color: var(--text-color);
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23.4px;
+    margin: 10px 0 0 0;
+    background-color: var(--accent-bg-color);
+    padding: 0;
+  }
+
+  /* ===== ПЕРВЫЙ БЛОК ===== */
+  .advice-block--first {
+    top: 67px; 
+    height: 408px;
+  }
+
+  .advice-block--first .advice-block__text {
+    height: 375px;
+  }
+
+  /* ===== ВТОРОЙ БЛОК ===== */
+  .advice-block--second {
+    top: 495px; 
+    height: 244px;
+  }
+
+  .advice-block--second .advice-block__text {
+    height: 211px;
+  }
+
+  /* ===== ТРЕТИЙ БЛОК ===== */
+  .advice-block--third {
+    top: 759px; 
+    height: 384px;
+  }
+
+  .advice-block--third .advice-block__text {
+    height: 351px;
+  }
+
+  /* ===== ЧЕТВЕРТЫЙ БЛОК ===== */
+  .advice-block--fourth {
+    top: 1163px; 
+    height: 244px;
+  }
+
+  .advice-block--fourth .advice-block__text {
+    height: 211px;
+  }
+
+  /* ===== ПЯТЫЙ БЛОК ===== */
+  .advice-block--fifth {
+    top: 1427px; 
+    height: 220px;
+  }
+
+  .advice-block--fifth .advice-block__text {
+    height: 187px;
+  }
+  /* ===== ЧЕТВЕРТАЯ СЕКЦИЯ ДЛЯ 375×668 ===== */
+  .section--fourth {
+    position: absolute;
+    width: 375px;
+    height: 1400px;
+    top: 4018px;
+    left: 0;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .section__title--fourth {
+    position: absolute;
+    width: 355px;
+    height: 24px;
+    left: 10px;
+    top: 0;
+    color: var(--text-color);
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23.4px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    background-color: var(--accent-color);
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* ===== ГАЛЕРЕЯ ДЛЯ 375×668 ===== */
+  .gallery {
+    position: absolute;
+    width: 355px;
+    height: 1376px;
+    top: 34px;
+    left: 10px;
+  }
+
+  /* ===== ОБЩИЕ СТИЛИ ДЛЯ ИЗОБРАЖЕНИЙ ===== */
+  .gallery__image {
+    position: absolute;
+    object-fit: cover;
+    border: 1px solid var(--accent-color);
+    width: 355px;
+    left: 0;
+  }
+
+  /* ===== 1. ЗАКАТ ===== */
+  .gallery__image--sunset {
+    height: 142px;
+    top: 0;
+  }
+
+  /* ===== 2. МОРОЖЕНОЕ ===== */
+  .gallery__image--ice-cream {
+    height: 355px;
+    top: 152px;
+  }
+
+  /* ===== 3. КАССЕТА ===== */
+  .gallery__image--tape {
+    height: 237px;
+    top: 517px;
+  }
+
+  /* ===== 4. КНИГИ ===== */
+  .gallery__image--books {
+    height: 355px;
+    top: 764px;
+  }
+
+  /* ===== 5. УЛИЦА ===== */
+  .gallery__image--street {
+    height: 237px;
+    top: 1129px;
+  }
+  /* ===== ФУТЕР ДЛЯ 375×668 ===== */
+  .footer {
+    position: relative;
+    width: 375px;
+    height: 668px;
+    margin: 0 auto;
+    background-color: var(--bg-color);
+    background-image: var(--bg-image);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+
+  .footer__title {
+    position: absolute;
+    top: 286px;
+    left: 14px;
+    width: 348px;
+    height: 96px;
+    margin: 0;
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 116px;
+    line-height: 83%;
+    color: var(--title-color);
+    text-shadow: 2px 2px 0 var(--accent-color);
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* ===== СТРЕЛКИ ФУТЕРА ДЛЯ 375×668 ===== */
+  .footer::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    bottom: 20px;
+    left: 10px;
+    border-bottom: 1px solid var(--decor-color);
+    border-left: 1px solid var(--decor-color);
+    border-top: none;
+    border-right: none;
+  }
+
+  .footer::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 10px;
+    right: 10px;
+    left: auto;
+    border-top: 1px solid var(--decor-color);
+    border-right: 1px solid var(--decor-color);
+    border-bottom: none;
+    border-left: none;
+  }
 }
