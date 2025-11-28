@@ -1,3 +1,4 @@
+
 :root.theme-dark {
   --accent-color: #FF0070;
   --text-color: #F1B2CE;
@@ -6,7 +7,7 @@
   --decor-color: #FF0070;
   --button-hover-color: rgba(255, 0, 112, 0.4);
   --bg-image: url('../images/cover-image-dark.png');
-  --accent-bg-color: #000028;
+  --accent-bg-color: #FF0070;
 }
 
 .theme-dark .header__decorative {
@@ -40,18 +41,18 @@
 .theme-dark .content-block__text,
 .theme-dark .content-column__text,
 .theme-dark .advice-block__text {
-  background-color: var(--accent-bg-color);
+  background-color: var(--bg-color);
   color: var(--text-color);
 }
 
 /* Фон для блоков с колонками */
 .theme-dark .content-column__block {
-  background-color: var(--accent-bg-color);
+  background-color: var(--bg-color);
 }
 
 /* Фон для блоков с советами */
 .theme-dark .advice-block {
-  background-color: var(--accent-bg-color);
+  background-color: var(--bg-color);
 }
 
 /* Стили для заголовков секций в темной теме */
@@ -61,7 +62,7 @@
 
 .theme-dark .section__title--second,
 .theme-dark .section__title--third {
-  background-color: var(--accent-bg-color);
+  background-color: var(--bg-color);
 }
 
 /* Стили для кнопок меню в темной теме */
