@@ -1385,23 +1385,13 @@
 .content-column:last-child .content-column__text {
       height: 351px;
 }
-/* Позиционирование текста для многозадачности */
-  .content-column:first-child .content-column__text {
-      position: absolute;
-      top: 43px;
-      left: 0;
-}
-/* Позиционирование текста для еды */
-  .content-column:nth-child(2) .content-column__text {
-      position: absolute;
-      top: 43px;
-      left: 0;
-}
-/* Позиционирование текста для гаджетов */
-  .content-column:last-child .content-column__text {
-      position: absolute;
-      top: 43px;
-      left: 0;
+/* Позиционирование текста для всех колонок */
+.content-column:first-child .content-column__text,
+.content-column:nth-child(2) .content-column__text,
+.content-column:last-child .content-column__text {
+  position: absolute;
+  top: 43px;
+  left: 0;
 }
 /* ===== ТРЕТЬЯ СЕКЦИЯ ДЛЯ 375×668 ===== */
   .section--third {
