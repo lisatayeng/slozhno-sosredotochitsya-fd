@@ -1,14 +1,28 @@
+/*
+  Переменные для вашего проекта
+  и их переопределение под различные устройства
+*/
+
 :root {
-  /* Точные цвета из фигмы */
-  --accent-color: #FF8DCB;      /* Розовый для фона рамки */
-  --text-color: #353430;        /* Чёрный для текста */
-  --title-color: #FFC2E6;       /* Светло-розовый для заголовка */
-  --bg-color: #FFF1F7;          /* Фон страницы */
-  --decor-color: #353430;       /* Чёрный для уголков и кнопок */
-  --button-hover-color: rgba(50, 49, 45, 0.4);
-  --bg-image: url('../images/cover-image-light.png');
-  --accent-bg-color: transparent; /* Прозрачный фон для блоков */
-  
-  /* Шрифты */
-  --main-font: 'IBM Plex mono', monospace;
+  --bg-image: url(../images/cover-image-dark.png);
+  --bg-color: #00183f;
+  --decor-color: #FF0070;
+  --button-color: #FF0070;
+  --hover-btn-color: rgba(255, 0, 112, 0.4);
+  --accent-color:  #FF0070;  
+  --accented-text-color: rgba(0, 0, 40, 1);      
+  --section-title-color: #FF0070;       
+  --text-color: #F1B2CE;
+  --main-title-color: #DB00FF;
+  --main-font-size: 18px;
+  --gap: 10px;
+  --double-gap: 20px;
+  --displayed: flex;
+}
+
+@media (768px <= width) {
+
+  :root {
+    --gap: 20px;
+  }
 }
