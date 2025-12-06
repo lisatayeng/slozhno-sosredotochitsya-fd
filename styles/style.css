@@ -66,7 +66,7 @@
 .header__decor-text::after {
   content: "";
   border-radius: 50%;
-  box-shadow: 0 0 10px 4px var(--decor-color);
+   box-shadow: 0 0 4px 2px var(--decor-color);
   background-color: var(--decor-color);
   inline-size: 9px;
   block-size: 9px;
@@ -131,7 +131,7 @@
   font-size: var(--main-font-size);
   block-size: max-content;
   inline-size: 100%;
-  inset-block-start: 40px;
+  margin-top: 40px;
 }
 
 .header__text_abzac {
@@ -218,8 +218,8 @@
   min-height: 668px;
   margin: 0;
   padding: 0;
-  block-size: 100dvh;
-  inset-block-end: 10px;
+  block-size: 100dvh; 
+  margin-bottom: 10px;
 }
 
 .footer__title {
@@ -240,25 +240,25 @@
   }
 
   .header__theme-menu {
-    position: relative;
-    justify-self: end;
-    align-self: center;
-    inset-block-start: 70px;
-  }
+  position: relative;
+  justify-self: end;
+  align-self: center;
+  margin-top: 70px;
+}
 
   .header__title {
-    position: relative;
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    inline-size: 100%;
-    inset-block-end: 0; 
-    inset-inline-end: var(--gap);
-  }
+  position: relative;
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  inline-size: 100%;
+  margin-bottom: 0;
+  margin-right: var(--gap);
+}
 
   .header__text {
-    position: relative;
-    inline-size: 50%;
-    inset-block-start: 40px; 
-  }
+  position: relative;
+  inline-size: 50%;
+  margin-top: 40px;
+}
  
   .section {
     grid-template-columns: 1fr 2fr;
@@ -326,9 +326,8 @@
   }
 
   .footer {
-    inset-block-end: 25px;
+     margin-bottom: 25px;
   }
-
  }
 
 /* ----------------------------медиазапрос------------------------------- */
@@ -336,10 +335,10 @@
 @media (1024px <= width) {
 
   .header__theme-menu {
-    justify-self: center;
-    align-self: start;
-    inset-block-start: var(--gap);
-  }
+  justify-self: center;
+  align-self: start;
+  margin-top: var(--gap); 
+}
 
   .header__theme-menu-list {
     display: grid;
@@ -366,7 +365,7 @@
     display: inline-block;
     justify-self: end;
     max-inline-size: 48vw;
-    inset-block-start: 50px;
+     margin-top: 50px;
   }
 
   .section {
@@ -398,7 +397,7 @@
   }
 
   .footer {
-    inset-block-end: 20px;
+    margin-bottom: 20px;
   }
 
   .footer__title {

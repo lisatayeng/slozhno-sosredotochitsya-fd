@@ -1,6 +1,6 @@
 :root.theme-dark {
   --bg-image: url(../images/cover-image-dark.png);
-  --bg-color: #00183f;
+  --bg-color: #000028;
   --decor-color: #FF0070;
   --button-color: #FF0070;
   --hover-btn-color: rgba(255, 0, 112, 0.4);
