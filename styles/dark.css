@@ -11,3 +11,19 @@
   --main-title-color: #DB00FF;
   --displayed: flex;
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-image: url(../images/cover-image-dark.png);
+    --bg-color: #000028;
+    --decor-color: #FF0070;
+    --button-color: #FF0070;
+    --hover-btn-color: rgba(255, 0, 112, 0.4);
+    --accent-color: #FF0070;  
+    --accented-text-color: rgba(0, 0, 40, 1);      
+    --section-title-color: #FF0070;       
+    --text-color: #F1B2CE;
+    --main-title-color: #DB00FF;
+    --displayed: flex;
+  }
+}
